@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.eclipse.hudson.plugins</groupId>
+        <artifactId>hudson-plugin-parent</artifactId>    
+        <version>3.0.0-M4</version>
+    </parent>
+
+    <groupId>org.hudsonci.plugins</groupId>
+    <artifactId>batch-task</artifactId>
+    <version>1.16-h-1-SNAPSHOT</version>
+    <packaging>hpi</packaging>
+    <name>batch task plugin</name>
+    <url>http://wiki.hudsonci.org/display/HUDSON/Batch+Task+Plugin</url>
+
+    <developers>
+        <developer>
+            <id>kohsuke</id>
+            <name>Kohsuke Kawaguchi</name>
+        </developer>
+        <developer>
+            <id>mindless</id>
+            <name>Alan Harder</name>
+        </developer>
+    </developers>
+    
+    <licenses>
+      <license>
+        <name>MIT License</name>
+        <url>http://www.opensource.org/licenses/mit-license.php</url>
+      </license>
+    </licenses>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <!-- TODO: please remove this exclude, once the parent is updated to v1.385+ -->
+                    <excludes>
+                        <exclude>**/BatchRunTest.*</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <connection>scm:git:git://github.com/hudson3-plugins/batch-task-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:hudson3-plugins/batch-task-plugin.git</developerConnection>
+        <url>http://github.com/hudson3-plugins/batch-task-plugin</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.hudsonci.lib</groupId>
+            <artifactId>envinject-lib</artifactId>
+            <version>1.12-h-1</version>
+        </dependency>
+    </dependencies>
+
+</project>  
+  
+
