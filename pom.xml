@@ -9,7 +9,7 @@
 
     <groupId>org.hudsonci.plugins</groupId>
     <artifactId>batch-task</artifactId>
-    <version>1.16-h-1</version>
+    <version>1.16-h-2-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>batch task plugin</name>
     <url>http://wiki.hudsonci.org/display/HUDSON/Batch+Task+Plugin</url>
